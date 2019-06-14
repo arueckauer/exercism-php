@@ -1,0 +1,28 @@
+{
+    "name": "arueckauer/exercism",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andi Rückauer",
+            "email": "arueckauer@gmail.com",
+            "homepage": "https://arueckauer.github.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "vimeo/psalm": "^3.4",
+        "phpunit/phpunit": "8.2"
+    },
+    "autoload": {
+
+        "psr-4": {
+            "Exercism\\RobotSimulator\\": "robot-simulator/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ExercismTest\\RobotSimulator\\": "robot-simulator/"
+        }
+    }
+}
