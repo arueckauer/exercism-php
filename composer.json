@@ -20,6 +20,7 @@
     },
     "autoload": {
         "psr-4": {
+            "Exercism\\HighScores\\": "high-scores",
             "Exercism\\ResistorColor\\": "resistor-color/",
             "Exercism\\ReverseString\\": "reverse-string/",
             "Exercism\\RobotSimulator\\": "robot-simulator/"
@@ -27,6 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "ExercismTest\\HighScores\\": "high-scores/",
             "ExercismTest\\ResistorColor\\": "resistor-color/",
             "ExercismTest\\ReverseString\\": "reverse-string/",
             "ExercismTest\\RobotSimulator\\": "robot-simulator/"
