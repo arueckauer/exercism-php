@@ -1,14 +1,14 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Exercism\RobotSimulator;
 
 class Position
 {
-    private $x;
+    private int $x;
 
-    private $y;
+    private int $y;
 
     public function __construct(int $x, int $y)
     {
@@ -16,7 +16,7 @@ class Position
         $this->y = $y;
     }
 
-    public function toArray() : array
+    public function toArray(): array
     {
         return [
             $this->x,
@@ -24,7 +24,7 @@ class Position
         ];
     }
 
-    public function advance(Direction $direction) : Position
+    public function advance(Direction $direction): Position
     {
         switch ($direction->get()) {
             case Direction::NORTH:

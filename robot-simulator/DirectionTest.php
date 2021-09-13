@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace ExercismTest\RobotSimulator;
 
@@ -8,50 +8,73 @@ use Exercism\RobotSimulator\Direction;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
+use function dirname;
+
 class DirectionTest extends TestCase
 {
-    public static function setUpBeforeClass() : void
+    public static function setUpBeforeClass(): void
     {
-        require_once __DIR__ . '/../vendor/autoload.php';
+        require_once dirname(__DIR__) . '/vendor/autoload.php';
     }
 
-    public function testNorth() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::
+     */
+    public function test_north(): void
     {
         $direction = new Direction(Direction::NORTH);
         $this->assertEquals(Direction::NORTH, $direction->get());
     }
 
-    public function testEast() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_east(): void
     {
         $direction = new Direction(Direction::EAST);
         $this->assertEquals(Direction::EAST, $direction->get());
     }
 
-    public function testSouth() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_south(): void
     {
         $direction = new Direction(Direction::SOUTH);
         $this->assertEquals(Direction::SOUTH, $direction->get());
     }
 
-    public function testWest() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_west(): void
     {
         $direction = new Direction(Direction::WEST);
         $this->assertEquals(Direction::WEST, $direction->get());
     }
 
-    public function testInvalidDirectionZero() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_invalid_direction_zero(): void
     {
         $this->expectException(InvalidArgumentException::class);
         new Direction(0);
     }
 
-    public function testInvalidDirectionMinusOne() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_invalid_direction_minus_one(): void
     {
         $this->expectException(InvalidArgumentException::class);
         new Direction(-1);
     }
 
-    public function testInvalidDirectionFive() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::__construct
+     */
+    public function test_invalid_direction_five(): void
     {
         $this->expectException(InvalidArgumentException::class);
         new Direction(5);

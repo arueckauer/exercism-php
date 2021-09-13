@@ -1,10 +1,12 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Exercism\RobotSimulator;
 
 use InvalidArgumentException;
+
+use function in_array;
 
 class Direction
 {
@@ -16,21 +18,21 @@ class Direction
 
     public const WEST = 4;
 
-    private static $allowableDirections = [
+    private static array $allowableDirections = [
         self::NORTH,
         self::EAST,
         self::SOUTH,
         self::WEST,
     ];
 
-    private $direction;
+    private int $direction;
 
     public function __construct(int $direction)
     {
         $this->set($direction);
     }
 
-    public function turnLeft() : void
+    public function turnLeft(): void
     {
         --$this->direction;
 
@@ -39,7 +41,7 @@ class Direction
         }
     }
 
-    public function turnRight() : void
+    public function turnRight(): void
     {
         ++$this->direction;
 
@@ -48,12 +50,12 @@ class Direction
         }
     }
 
-    public function get() : int
+    public function get(): int
     {
         return $this->direction;
     }
 
-    public function set(int $direction) : Direction
+    public function set(int $direction): Direction
     {
         if (! in_array($direction, static::$allowableDirections, true)) {
             throw new InvalidArgumentException('Given direction is not valid.');

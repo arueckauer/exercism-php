@@ -1,16 +1,18 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Exercism\RobotSimulator;
 
 use InvalidArgumentException;
 
+use function str_split;
+
 class Robot
 {
-    public $position;
+    public Position $position;
 
-    public $direction;
+    public Direction $direction;
 
     public function __construct(Position $position, Direction $direction)
     {
@@ -18,7 +20,7 @@ class Robot
         $this->direction = $direction;
     }
 
-    public function instructions(string $path) : void
+    public function instructions(string $path): void
     {
         foreach (str_split($path) as $direction) {
             switch ($direction) {
@@ -36,7 +38,6 @@ class Robot
 
                 default:
                     throw new InvalidArgumentException("Provided instruction '$direction' is not supported.'");
-                    break;
             }
         }
     }

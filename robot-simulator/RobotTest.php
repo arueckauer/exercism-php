@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace ExercismTest\RobotSimulator;
 
@@ -10,14 +10,19 @@ use Exercism\RobotSimulator\Robot;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
+use function dirname;
+
 class RobotTest extends TestCase
 {
-    public static function setUpBeforeClass() : void
+    public static function setUpBeforeClass(): void
     {
-        require_once __DIR__ . '/../vendor/autoload.php';
+        require_once dirname(__DIR__) . '/vendor/autoload.php';
     }
 
-    public function testCreate() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Robot::__construct
+     */
+    public function test_create(): void
     {
         $robot = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
         $this->assertEquals([0, 0], $robot->position->toArray());
@@ -28,7 +33,10 @@ class RobotTest extends TestCase
         $this->assertEquals(Direction::NORTH, $robot->direction->get());
     }
 
-    public function testTurnRight() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::turnRight
+     */
+    public function test_turn_right(): void
     {
         $robot      = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
         $directions = [
@@ -45,7 +53,10 @@ class RobotTest extends TestCase
         }
     }
 
-    public function testTurnLeft() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Direction::turnLeft
+     */
+    public function test_turn_left(): void
     {
         $robot      = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
         $directions = [
@@ -62,7 +73,10 @@ class RobotTest extends TestCase
         }
     }
 
-    public function testAdvance() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Position::advance
+     */
+    public function test_advance(): void
     {
         $robot = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
         $robot->position->advance($robot->direction);
@@ -85,7 +99,10 @@ class RobotTest extends TestCase
         $this->assertEquals([-1, 0], $robot->position->toArray());
     }
 
-    public function testInstructions() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Robot::instructions
+     */
+    public function test_instructions(): void
     {
         $robot = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
         $robot->instructions('LAAARALA');
@@ -103,7 +120,10 @@ class RobotTest extends TestCase
         $this->assertEquals(Direction::NORTH, $robot->direction->get());
     }
 
-    public function testMalformedInstructions() : void
+    /**
+     * @covers \Exercism\RobotSimulator\Robot::instructions
+     */
+    public function test_malformed_instructions(): void
     {
         $this->expectException(InvalidArgumentException::class);
         $robot = new Robot(new Position(0, 0), new Direction(Direction::NORTH));
