@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Exercism\HighScores;
-
-use function array_slice;
-use function end;
-use function max;
-use function rsort;
-
 class HighScores
 {
     /** @psalm-var non-empty-array<int, int> */

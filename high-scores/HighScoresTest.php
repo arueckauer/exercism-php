@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ExercismTest\HighScores;
 
-use Exercism\HighScores\HighScores;
+use HighScores;
 use PHPUnit\Framework\TestCase;
 
 class HighScoresTest extends TestCase
@@ -15,7 +15,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::scores
+     * @covers HighScores::scores
      */
     public function test_list_of_scores(): void
     {
@@ -24,7 +24,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::latest
+     * @covers HighScores::latest
      */
     public function test_latest_score(): void
     {
@@ -33,7 +33,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalBest
+     * @covers HighScores::personalBest
      */
     public function test_personalBest(): void
     {
@@ -42,7 +42,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalTopThree
+     * @covers HighScores::personalTopThree
      */
     public function test_personalTopThree_from_a_list_of_scores(): void
     {
@@ -51,7 +51,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalTopThree
+     * @covers HighScores::personalTopThree
      */
     public function test_personalTopThree_highest_to_lowest(): void
     {
@@ -60,7 +60,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalTopThree
+     * @covers HighScores::personalTopThree
      */
     public function test_personalTopThree_when_there_is_a_tie(): void
     {
@@ -69,7 +69,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalTopThree
+     * @covers HighScores::personalTopThree
      */
     public function test_personalTopThree_when_there_are_less_than_3(): void
     {
@@ -78,7 +78,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::personalTopThree
+     * @covers HighScores::personalTopThree
      */
     public function test_personalTopThree_when_there_is_only_one(): void
     {
@@ -87,7 +87,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::latest
+     * @covers HighScores::latest
      */
     public function test_latest_score_does_not_change_after_getting_personal_best(): void
     {
@@ -99,7 +99,7 @@ class HighScoresTest extends TestCase
     }
 
     /**
-     * @covers \Exercism\HighScores\HighScores::latest
+     * @covers HighScores::latest
      */
     public function test_latest_score_does_not_change_after_getting_personalTopThree(): void
     {
