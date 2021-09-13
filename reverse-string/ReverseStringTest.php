@@ -20,7 +20,7 @@ class ReverseStringTest extends TestCase
      */
     public function test_empty_string(): void
     {
-        $this->assertEquals("", reverseString(""));
+        $this->assertEquals('', reverseString(''));
     }
 
     /**
@@ -28,7 +28,7 @@ class ReverseStringTest extends TestCase
      */
     public function test_word(): void
     {
-        $this->assertEquals("tobor", reverseString("robot"));
+        $this->assertEquals('tobor', reverseString('robot'));
     }
 
     /**
@@ -36,7 +36,7 @@ class ReverseStringTest extends TestCase
      */
     public function test_capitalized_word(): void
     {
-        $this->assertEquals("nemaR", reverseString("Ramen"));
+        $this->assertEquals('nemaR', reverseString('Ramen'));
     }
 
     /**
@@ -52,7 +52,7 @@ class ReverseStringTest extends TestCase
      */
     public function test_palindrome(): void
     {
-        $this->assertEquals("racecar", reverseString("racecar"));
+        $this->assertEquals('racecar', reverseString('racecar'));
     }
 
     /**
@@ -60,6 +60,6 @@ class ReverseStringTest extends TestCase
      */
     public function test_even_sized_word(): void
     {
-        $this->assertEquals("reward", reverseString("drawer"));
+        $this->assertEquals('reward', reverseString('drawer'));
     }
 }
