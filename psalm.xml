@@ -7,6 +7,7 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
+        <directory name="resistor-color" />
         <directory name="reverse-string" />
         <directory name="robot-simulator" />
         <ignoreFiles>

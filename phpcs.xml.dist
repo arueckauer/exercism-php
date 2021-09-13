@@ -10,12 +10,14 @@
 
     <arg value="p"/>
 
+    <file>resistor-color</file>
     <file>reverse-string</file>
     <file>robot-simulator</file>
 
     <rule ref="LaminasCodingStandard"/>
 
     <rule ref="PSR1.Methods.CamelCapsMethodName">
+        <exclude-pattern>resistor-color/*Test.php</exclude-pattern>
         <exclude-pattern>reverse-string/*Test.php</exclude-pattern>
         <exclude-pattern>robot-simulator/*Test.php</exclude-pattern>
     </rule>

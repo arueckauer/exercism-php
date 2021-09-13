@@ -21,12 +21,14 @@
     "autoload": {
 
         "psr-4": {
+            "Exercism\\ResistorColor\\": "resistor-color/",
             "Exercism\\ReverseString\\": "reverse-string/",
             "Exercism\\RobotSimulator\\": "robot-simulator/"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "ExercismTest\\ResistorColor\\": "resistor-color/",
             "ExercismTest\\ReverseString\\": "reverse-string/",
             "ExercismTest\\RobotSimulator\\": "robot-simulator/"
         }
