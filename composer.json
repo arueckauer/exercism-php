@@ -21,11 +21,13 @@
     "autoload": {
 
         "psr-4": {
+            "Exercism\\ReverseString\\": "reverse-string/",
             "Exercism\\RobotSimulator\\": "robot-simulator/"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "ExercismTest\\ReverseString\\": "reverse-string/",
             "ExercismTest\\RobotSimulator\\": "robot-simulator/"
         }
     }
