@@ -14,14 +14,16 @@
          colors="true">
     <testsuites>
         <testsuite name="default">
-            <directory>test</directory>
+            <directory>reverse-string</directory>
+            <directory>robot-simulator</directory>
         </testsuite>
     </testsuites>
 
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
               processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">src</directory>
+            <directory suffix=".php">reverse-string</directory>
+            <directory suffix=".php">robot-simulator</directory>
         </include>
     </coverage>
 </phpunit>
