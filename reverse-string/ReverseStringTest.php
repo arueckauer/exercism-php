@@ -6,8 +6,6 @@ namespace ExcercismTest\ReverseString;
 
 use PHPUnit\Framework\TestCase;
 
-use function Excercism\ReverseString\reverseString;
-
 class ReverseStringTest extends TestCase
 {
     public static function setUpBeforeClass(): void
