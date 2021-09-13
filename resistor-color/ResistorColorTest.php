@@ -1,64 +1,58 @@
 <?php
 
-/*
- * By adding type hints and enabling strict type checking, code can become
- * easier to read, self-documenting and reduce the number of potential bugs.
- * By default, type declarations are non-strict, which means they will attempt
- * to change the original type to match the type specified by the
- * type-declaration.
- *
- * In other words, if you pass a string to a function requiring a float,
- * it will attempt to convert the string value to a float.
- *
- * To enable strict mode, a single declare directive must be placed at the top
- * of the file.
- * This means that the strictness of typing is configured on a per-file basis.
- * This directive not only affects the type declarations of parameters, but also
- * a function's return type.
- *
- * For more info review the Concept on strict type checking in the PHP track
- * <link>.
- *
- * To disable strict typing, comment out the directive below.
- */
-
 declare(strict_types=1);
 
-class ResistorColorTest extends PHPUnit\Framework\TestCase
+namespace ExcercismTest\ResistorColor;
+
+use PHPUnit\Framework\TestCase;
+
+class ResistorColorTest extends TestCase
 {
     public static function setUpBeforeClass(): void
     {
         require_once 'ResistorColor.php';
     }
 
-    public function testBlackColorCode(): void
+    /**
+     * @covers ::colorCode
+     */
+    public function test_black_color_code(): void
     {
-        $this->assertEquals(colorCode("black"), 0);
+        self::assertSame(0, colorCode('black'));
     }
 
-    public function testOrangeColorCode(): void
+    /**
+     * @covers ::colorCode
+     */
+    public function test_orange_color_code(): void
     {
-        $this->assertEquals(colorCode("orange"), 3);
+        self::assertSame(3, colorCode('orange'));
     }
 
-    public function testWhiteColorCode(): void
+    /**
+     * @covers ::colorCode
+     */
+    public function test_white_color_code(): void
     {
-        $this->assertEquals(colorCode("white"), 9);
+        self::assertSame(9, colorCode('white'));
     }
 
-    public function testColors(): void
+    /**
+     * @covers ::colorCode
+     */
+    public function test_colors(): void
     {
-        $this->assertEquals(COLORS, [
-            "black",
-            "brown",
-            "red",
-            "orange",
-            "yellow",
-            "green",
-            "blue",
-            "violet",
-            "grey",
-            "white"
+        self::assertSame(COLORS, [
+            'black',
+            'brown',
+            'red',
+            'orange',
+            'yellow',
+            'green',
+            'blue',
+            'violet',
+            'grey',
+            'white',
         ]);
     }
 }
