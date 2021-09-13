@@ -9,7 +9,9 @@
             "role": "Developer"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "~8.0.0"
+    },
     "require-dev": {
         "vimeo/psalm": "^3.4",
         "phpunit/phpunit": "8.2"
