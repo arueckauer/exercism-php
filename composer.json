@@ -23,7 +23,8 @@
             "Exercism\\HighScores\\": "high-scores",
             "Exercism\\ResistorColor\\": "resistor-color/",
             "Exercism\\ReverseString\\": "reverse-string/",
-            "Exercism\\RobotSimulator\\": "robot-simulator/"
+            "Exercism\\RobotSimulator\\": "robot-simulator/",
+            "Exercism\\Tournament\\": "tournament/"
         }
     },
     "autoload-dev": {
@@ -31,7 +32,8 @@
             "ExercismTest\\HighScores\\": "high-scores/",
             "ExercismTest\\ResistorColor\\": "resistor-color/",
             "ExercismTest\\ReverseString\\": "reverse-string/",
-            "ExercismTest\\RobotSimulator\\": "robot-simulator/"
+            "ExercismTest\\RobotSimulator\\": "robot-simulator/",
+            "ExercismTest\\Tournament\\": "tournament/"
         }
     }
 }
