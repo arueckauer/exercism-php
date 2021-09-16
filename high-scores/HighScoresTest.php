@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-namespace ExercismTest\HighScores;
-
-use HighScores;
 use PHPUnit\Framework\TestCase;
 
 class HighScoresTest extends TestCase
@@ -14,99 +11,69 @@ class HighScoresTest extends TestCase
         require_once 'HighScores.php';
     }
 
-    /**
-     * @covers HighScores::scores
-     */
     public function test_list_of_scores(): void
     {
         $input = [30, 50, 20, 70];
-        self::assertSame([30, 50, 20, 70], (new HighScores($input))->scores());
+        $this->assertEquals([30, 50, 20, 70], (new HighScores($input))->scores);
     }
 
-    /**
-     * @covers HighScores::latest
-     */
-    public function test_latest_score(): void
+    public function testLatestScore(): void
     {
         $input = [100, 0, 90, 30];
-        self::assertSame(30, (new HighScores($input))->latest());
+        $this->assertEquals(30, (new HighScores($input))->latest);
     }
 
-    /**
-     * @covers HighScores::personalBest
-     */
-    public function test_personalBest(): void
+    public function testPersonalBest(): void
     {
         $input = [40, 100, 70];
-        self::assertSame(100, (new HighScores($input))->personalBest());
+        $this->assertEquals(100, (new HighScores($input))->personalBest);
     }
 
-    /**
-     * @covers HighScores::personalTopThree
-     */
-    public function test_personalTopThree_from_a_list_of_scores(): void
+    public function testPersonalTopThreeFromAListOfScores(): void
     {
         $input = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 70];
-        self::assertSame([100, 90, 70], (new HighScores($input))->personalTopThree());
+        $this->assertEquals([100, 90, 70], (new HighScores($input))->personalTopThree);
     }
 
-    /**
-     * @covers HighScores::personalTopThree
-     */
-    public function test_personalTopThree_highest_to_lowest(): void
+    public function testPersonalTopHighestToLowest(): void
     {
         $input = [20, 10, 30];
-        self::assertSame([30, 20, 10], (new HighScores($input))->personalTopThree());
+        $this->assertEquals([30, 20, 10], (new HighScores($input))->personalTopThree);
     }
 
-    /**
-     * @covers HighScores::personalTopThree
-     */
-    public function test_personalTopThree_when_there_is_a_tie(): void
+    public function testPersonalTopWhenThereIsATie(): void
     {
         $input = [40, 20, 40, 30];
-        self::assertSame([40, 40, 30], (new HighScores($input))->personalTopThree());
+        $this->assertEquals([40, 40, 30], (new HighScores($input))->personalTopThree);
     }
 
-    /**
-     * @covers HighScores::personalTopThree
-     */
-    public function test_personalTopThree_when_there_are_less_than_3(): void
+    public function testPersonalTopWhenThereAreLessThan3(): void
     {
         $input = [30, 70];
-        self::assertSame([70, 30], (new HighScores($input))->personalTopThree());
+        $this->assertEquals([70, 30], (new HighScores($input))->personalTopThree);
     }
 
-    /**
-     * @covers HighScores::personalTopThree
-     */
-    public function test_personalTopThree_when_there_is_only_one(): void
+    public function testPersonalTopWhenThereIsOnlyOne(): void
     {
         $input = [40];
-        self::assertSame([40], (new HighScores($input))->personalTopThree());
+        $this->assertEquals([40], (new HighScores($input))->personalTopThree);
     }
 
-    /**
-     * @covers HighScores::latest
-     */
-    public function test_latest_score_does_not_change_after_getting_personal_best(): void
+    public function testLatestScoreDoesNotChangeAfterGettingPersonalBest(): void
     {
         $input     = [20, 10, 30, 3, 2, 1];
         $highScore = new HighScores($input);
 
-        self::assertSame(30, $highScore->personalBest());
-        self::assertSame(1, $highScore->latest());
+        $this->assertEquals(30, $highScore->personalBest);
+        $this->assertEquals(1, $highScore->latest);
     }
 
-    /**
-     * @covers HighScores::latest
-     */
-    public function test_latest_score_does_not_change_after_getting_personalTopThree(): void
+    public function testLatestScoreDoesNotChangeAfterGettingPersonalTopThree(): void
     {
         $input     = [20, 100, 30, 90, 2, 70];
         $highScore = new HighScores($input);
 
-        self::assertSame([100, 90, 70], $highScore->personalTopThree());
-        self::assertSame(70, $highScore->latest());
+        $this->assertEquals([100, 90, 70], $highScore->personalTopThree);
+        $this->assertEquals(70, $highScore->latest);
     }
 }

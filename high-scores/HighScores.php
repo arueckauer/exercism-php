@@ -5,36 +5,22 @@ declare(strict_types=1);
 class HighScores
 {
     /** @psalm-var non-empty-array<int, int> */
-    private array $scores;
+    public array $scores;
+    public int $latest;
+    public int $personalBest;
+    public array $personalTopThree;
 
     /**
      * @psalm-param non-empty-array<int, int> $bar
      */
     public function __construct(array $scores)
     {
-        $this->scores = $scores;
-    }
+        $this->scores       = $scores;
+        $this->latest       = end($this->scores);
+        $this->personalBest = max($this->scores);
 
-    public function scores(): array
-    {
-        return $this->scores;
-    }
-
-    public function latest(): int
-    {
-        return end($this->scores);
-    }
-
-    public function personalBest(): int
-    {
-        return max($this->scores);
-    }
-
-    public function personalTopThree(): array
-    {
         $scores = $this->scores;
         rsort($scores);
-
-        return array_slice($scores, 0, 3);
+        $this->personalTopThree = array_slice($scores, 0, 3);
     }
 }
