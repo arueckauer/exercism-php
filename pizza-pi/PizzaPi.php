@@ -4,23 +4,31 @@ declare(strict_types=1);
 
 class PizzaPi
 {
-    public function calculateDoughRequirement()
+    private static int $doughPerPerson = 20;
+    private static int $doughPerPizza  = 200;
+    private static int $saucePerPizza  = 125;
+    private static int $slicePerPizza  = 8;
+
+    public function calculateDoughRequirement(int $numberOfPizzas, int $numberOfPersons): int
     {
-        throw new BadFunctionCallException("Implement the function");
+        return $numberOfPizzas * ($numberOfPersons * self::$doughPerPerson + self::$doughPerPizza);
     }
 
-    public function calculateSauceRequirement()
+    public function calculateSauceRequirement(int $numberOfPizzas, int $sauceCanVolume): float
     {
-        throw new BadFunctionCallException("Implement the function");
+        return $numberOfPizzas * self::$saucePerPizza / $sauceCanVolume;
     }
 
-    public function calculateCheeseCubeCoverage()
-    {
-        throw new BadFunctionCallException("Implement the function");
+    public function calculateCheeseCubeCoverage(
+        int $cheeseCubeSideLength,
+        float $cheeseLayerThickness,
+        int $pizzaDiameter,
+    ): float {
+        return (int) ($cheeseCubeSideLength ** 3 / ($cheeseLayerThickness * pi() * $pizzaDiameter));
     }
 
-    public function calculateLeftOverSlices()
+    public function calculateLeftOverSlices(int $numberOfPizzas, int $numberOfPersons): int
     {
-        throw new BadFunctionCallException("Implement the function");
+        return $numberOfPizzas * self::$slicePerPizza % $numberOfPersons;
     }
 }
