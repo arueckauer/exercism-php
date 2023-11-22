@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class HighSchoolSweetheartTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass(): void
@@ -74,7 +76,7 @@ class HighSchoolSweetheartTest extends PHPUnit\Framework\TestCase
     public function testPair()
     {
         $sweetheart = new HighSchoolSweetheart();
-        $expected = <<<EXPECTED_HEART
+        $expected   = <<<EXPECTED_HEART
                  ******       ******
                **      **   **      **
              **         ** **         **
