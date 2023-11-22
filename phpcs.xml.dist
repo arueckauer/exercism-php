@@ -23,4 +23,10 @@
     <rule ref="PSR1.Methods.CamelCapsMethodName">
         <exclude-pattern>*/*Test.php</exclude-pattern>
     </rule>
+    <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
+        <exclude-pattern>tournament</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Classes.ClassFileName.NoMatch">
+        <exclude-pattern>tournament</exclude-pattern>
+    </rule>
 </ruleset>
