@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class PizzaPiTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass(): void
@@ -14,7 +16,7 @@ class PizzaPiTest extends PHPUnit\Framework\TestCase
     public function testCalculateDoughRequirement()
     {
         $pizza_pi = new PizzaPi();
-        $actual = $pizza_pi->calculateDoughRequirement(5, 7);
+        $actual   = $pizza_pi->calculateDoughRequirement(5, 7);
         $expected = 1700;
         $this->assertEquals($expected, $actual);
     }
@@ -26,7 +28,7 @@ class PizzaPiTest extends PHPUnit\Framework\TestCase
     public function testCalculateSauceRequirement()
     {
         $pizza_pi = new PizzaPi();
-        $actual = $pizza_pi->calculateSauceRequirement(8, 250);
+        $actual   = $pizza_pi->calculateSauceRequirement(8, 250);
         $expected = 4;
         $this->assertEquals($expected, $actual);
     }
@@ -38,7 +40,7 @@ class PizzaPiTest extends PHPUnit\Framework\TestCase
     public function testCalculateCheeseCoverage()
     {
         $pizza_pi = new PizzaPi();
-        $actual = $pizza_pi->calculateCheeseCubeCoverage(25, 0.5, 30);
+        $actual   = $pizza_pi->calculateCheeseCubeCoverage(25, 0.5, 30);
         $expected = 331;
         $this->assertEquals($expected, $actual);
     }
@@ -50,7 +52,7 @@ class PizzaPiTest extends PHPUnit\Framework\TestCase
     public function testCalculateLeftOverSlicesWithoutLeftOver()
     {
         $pizza_pi = new PizzaPi();
-        $actual = $pizza_pi->calculateLeftOverSlices(2, 4);
+        $actual   = $pizza_pi->calculateLeftOverSlices(2, 4);
         $expected = 0;
         $this->assertEquals($expected, $actual);
     }
@@ -62,7 +64,7 @@ class PizzaPiTest extends PHPUnit\Framework\TestCase
     public function testCalculateLeftOverSlicesWithLeftOver()
     {
         $pizza_pi = new PizzaPi();
-        $actual = $pizza_pi->calculateLeftOverSlices(4, 3);
+        $actual   = $pizza_pi->calculateLeftOverSlices(4, 3);
         $expected = 2;
         $this->assertEquals($expected, $actual);
     }
