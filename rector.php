@@ -12,6 +12,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/annalyns-infiltration',
         __DIR__ . '/high-scores',
         __DIR__ . '/lasagna',
+        __DIR__ . '/pizza-pipe',
         __DIR__ . '/resistor-color',
         __DIR__ . '/reverse-string',
         __DIR__ . '/robot-simulator',

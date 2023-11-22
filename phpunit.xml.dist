@@ -11,6 +11,7 @@
       <directory>annalyns-infiltration</directory>
       <directory>high-scores</directory>
       <directory>lasagna</directory>
+      <directory>pizza-pi</directory>
       <directory>resistor-color</directory>
       <directory>reverse-string</directory>
       <directory>robot-simulator</directory>
@@ -23,6 +24,7 @@
       <directory suffix=".php">annalyns-infiltration</directory>
       <directory suffix=".php">high-scores</directory>
       <directory suffix=".php">lasagna</directory>
+      <directory suffix=".php">pizza-pi</directory>
       <directory suffix=".php">resistor-color</directory>
       <directory suffix=".php">reverse-string</directory>
       <directory suffix=".php">robot-simulator</directory>
