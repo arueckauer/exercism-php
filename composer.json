@@ -30,6 +30,7 @@
       "Exercism\\ResistorColor\\": "resistor-color/",
       "Exercism\\ReverseString\\": "reverse-string/",
       "Exercism\\RobotSimulator\\": "robot-simulator/",
+      "Exercism\\Sweethearts\\": "sweethearts/",
       "Exercism\\Tournament\\": "tournament/"
     }
   },

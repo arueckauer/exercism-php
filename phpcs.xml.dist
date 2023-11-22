@@ -17,6 +17,7 @@
     <file>resistor-color</file>
     <file>reverse-string</file>
     <file>robot-simulator</file>
+    <file>sweethearts</file>
     <file>tournament</file>
 
     <rule ref="LaminasCodingStandard">

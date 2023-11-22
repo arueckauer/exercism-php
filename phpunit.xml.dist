@@ -15,6 +15,7 @@
       <directory>resistor-color</directory>
       <directory>reverse-string</directory>
       <directory>robot-simulator</directory>
+      <directory>sweethearts</directory>
       <directory>tournament</directory>
     </testsuite>
   </testsuites>
@@ -28,6 +29,7 @@
       <directory suffix=".php">resistor-color</directory>
       <directory suffix=".php">reverse-string</directory>
       <directory suffix=".php">robot-simulator</directory>
+      <directory suffix=".php">sweethearts</directory>
       <directory suffix=".php">tournament</directory>
     </include>
   </source>

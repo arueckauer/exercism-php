@@ -16,6 +16,7 @@
         <directory name="resistor-color" />
         <directory name="reverse-string" />
         <directory name="robot-simulator" />
+        <directory name="sweethearts" />
         <directory name="tournament" />
         <ignoreFiles>
             <directory name="vendor" />

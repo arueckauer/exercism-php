@@ -16,6 +16,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/resistor-color',
         __DIR__ . '/reverse-string',
         __DIR__ . '/robot-simulator',
+        __DIR__ . '/sweethearts',
         __DIR__ . '/tournament',
         ]
     );
