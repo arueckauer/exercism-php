@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "neenjaw"
+  ],
+  "files": {
+    "solution": [
+      "Lasagna.php"
+    ],
+    "test": [
+      "LasagnaTest.php"
+    ],
+    "exemplar": [
+      ".meta/exemplar.php"
+    ]
+  },
+  "blurb": "Learn about the basics of PHP syntax!"
+}
