@@ -19,6 +19,7 @@
     <file>robot-simulator</file>
     <file>sweethearts</file>
     <file>tournament</file>
+    <file>windowing-system</file>
 
     <rule ref="LaminasCodingStandard">
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>

@@ -17,6 +17,7 @@
       <directory>robot-simulator</directory>
       <directory>sweethearts</directory>
       <directory>tournament</directory>
+      <directory>windowing-system</directory>
     </testsuite>
   </testsuites>
   <coverage/>
@@ -31,6 +32,7 @@
       <directory suffix=".php">robot-simulator</directory>
       <directory suffix=".php">sweethearts</directory>
       <directory suffix=".php">tournament</directory>
+      <directory suffix=".php">windowing-system</directory>
     </include>
   </source>
 </phpunit>

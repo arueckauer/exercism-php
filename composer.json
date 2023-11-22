@@ -31,7 +31,8 @@
       "Exercism\\ReverseString\\": "reverse-string/",
       "Exercism\\RobotSimulator\\": "robot-simulator/",
       "Exercism\\Sweethearts\\": "sweethearts/",
-      "Exercism\\Tournament\\": "tournament/"
+      "Exercism\\Tournament\\": "tournament/",
+      "Exercism\\WindowingSystem\\": "windowing-system/"
     }
   },
   "config": {

@@ -18,6 +18,7 @@
         <directory name="robot-simulator" />
         <directory name="sweethearts" />
         <directory name="tournament" />
+        <directory name="windowing-system" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

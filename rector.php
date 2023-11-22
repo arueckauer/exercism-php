@@ -18,6 +18,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/robot-simulator',
         __DIR__ . '/sweethearts',
         __DIR__ . '/tournament',
+        __DIR__ . '/windowing-system',
         ]
     );
 
