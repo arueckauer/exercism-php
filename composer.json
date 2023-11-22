@@ -1,6 +1,7 @@
 {
   "name": "arueckauer/exercism",
   "license": "BSD-3-Clause",
+  "type": "project",
   "authors": [
     {
       "name": "Andi Rückauer",
