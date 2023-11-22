@@ -19,8 +19,8 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
     {
         $reflector = new ReflectionClass(ProgramWindow::class);
         $this->assertHasProperty($reflector, 'y', [
-            'has_type'    => false,
-            'has_default' => false,
+            'has_type'    => true,
+            'has_default' => true,
         ]);
     }
 
@@ -32,8 +32,8 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
     {
         $reflector = new ReflectionClass(ProgramWindow::class);
         $this->assertHasProperty($reflector, 'x', [
-            'has_type'    => false,
-            'has_default' => false,
+            'has_type'    => true,
+            'has_default' => true,
         ]);
     }
 
@@ -45,8 +45,8 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
     {
         $reflector = new ReflectionClass(ProgramWindow::class);
         $this->assertHasProperty($reflector, 'height', [
-            'has_type'    => false,
-            'has_default' => false,
+            'has_type'    => true,
+            'has_default' => true,
         ]);
     }
 
@@ -58,8 +58,8 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
     {
         $reflector = new ReflectionClass(ProgramWindow::class);
         $this->assertHasProperty($reflector, 'width', [
-            'has_type'    => false,
-            'has_default' => false,
+            'has_type'    => true,
+            'has_default' => true,
         ]);
     }
 
@@ -104,11 +104,11 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
      */
     public function testProgramWindowResize()
     {
-        $window = new ProgramWindow();
-        $size   = new Size(430, 2135);
-        $window->resize($size);
-        $this->assertEquals(430, $window->height);
-        $this->assertEquals(2135, $window->width);
+        $window        = new ProgramWindow();
+        $size          = new Size(430, 2135);
+        $resizedWindow = $window->resize($size);
+        $this->assertEquals(430, $resizedWindow->height);
+        $this->assertEquals(2135, $resizedWindow->width);
     }
 
     /**
@@ -117,11 +117,11 @@ class ProgramWindowTest extends PHPUnit\Framework\TestCase
      */
     public function testProgramWindowMove()
     {
-        $window   = new ProgramWindow();
-        $position = new Position(40, 235);
-        $window->move($position);
-        $this->assertEquals(40, $window->y);
-        $this->assertEquals(235, $window->x);
+        $window           = new ProgramWindow();
+        $position         = new Position(40, 235);
+        $positionedWindow = $window->move($position);
+        $this->assertEquals(40, $positionedWindow->y);
+        $this->assertEquals(235, $positionedWindow->x);
     }
 
     private function assertHasProperty(
