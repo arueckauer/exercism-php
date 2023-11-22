@@ -7,7 +7,6 @@ class Lasagna
     public function expectedCookTime(): int
     {
         return 40;
-
     }
 
     public function remainingCookTime($elapsed_minutes): int
