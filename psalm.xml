@@ -9,6 +9,7 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
+        <directory name="annalyns-infiltration" />
         <directory name="high-scores" />
         <directory name="lasagna" />
         <directory name="resistor-color" />

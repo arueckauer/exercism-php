@@ -8,6 +8,7 @@
          cacheDirectory=".phpunit.cache">
   <testsuites>
     <testsuite name="default">
+      <directory>annalyns-infiltration</directory>
       <directory>high-scores</directory>
       <directory>lasagna</directory>
       <directory>resistor-color</directory>
@@ -19,6 +20,7 @@
   <coverage/>
   <source>
     <include>
+      <directory suffix=".php">annalyns-infiltration</directory>
       <directory suffix=".php">high-scores</directory>
       <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">resistor-color</directory>

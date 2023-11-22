@@ -23,7 +23,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Exercism\\HighScores\\": "high-scores",
+      "Exercism\\AnnalynsInfiltration\\": "annalyns-infiltration/",
+      "Exercism\\HighScores\\": "high-scores/",
       "Exercism\\Lasagna\\": "lasagna/",
       "Exercism\\ResistorColor\\": "resistor-color/",
       "Exercism\\ReverseString\\": "reverse-string/",
@@ -33,6 +34,7 @@
   },
   "autoload-dev": {
     "psr-4": {
+      "ExercismTest\\AnnalynsInfiltration\\": "annalyns-infiltration/",
       "ExercismTest\\HighScores\\": "high-scores/",
       "ExercismTest\\Lasagna\\": "lasagna/",
       "ExercismTest\\ResistorColor\\": "resistor-color/",

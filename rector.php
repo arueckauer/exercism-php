@@ -9,6 +9,7 @@ use Rector\Set\ValueObject\LevelSetList;
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths(
         [
+        __DIR__ . '/annalyns-infiltration',
         __DIR__ . '/high-scores',
         __DIR__ . '/lasagna',
         __DIR__ . '/resistor-color',
