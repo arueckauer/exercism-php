@@ -4,15 +4,12 @@ declare(strict_types=1);
 
 class HighScores
 {
-    /** @psalm-var non-empty-array<int, int> */
+    /** @var int[] */
     public array $scores;
     public int $latest;
     public int $personalBest;
     public array $personalTopThree;
 
-    /**
-     * @psalm-param non-empty-array<int, int> $bar
-     */
     public function __construct(array $scores)
     {
         $this->scores       = $scores;
