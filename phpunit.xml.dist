@@ -9,6 +9,7 @@
   <testsuites>
     <testsuite name="default">
       <directory>high-scores</directory>
+      <directory>lasagna</directory>
       <directory>resistor-color</directory>
       <directory>reverse-string</directory>
       <directory>robot-simulator</directory>
@@ -18,6 +19,7 @@
   <source>
     <include>
       <directory suffix=".php">high-scores</directory>
+      <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">resistor-color</directory>
       <directory suffix=".php">reverse-string</directory>
       <directory suffix=".php">robot-simulator</directory>

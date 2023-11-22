@@ -10,6 +10,7 @@
 >
     <projectFiles>
         <directory name="high-scores" />
+        <directory name="lasagna" />
         <directory name="resistor-color" />
         <directory name="reverse-string" />
         <directory name="robot-simulator" />

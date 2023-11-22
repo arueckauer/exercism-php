@@ -11,6 +11,7 @@
     <arg value="p"/>
 
     <file>high-scores</file>
+    <file>lasagna</file>
     <file>resistor-color</file>
     <file>reverse-string</file>
     <file>robot-simulator</file>
