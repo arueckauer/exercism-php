@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass(): void
@@ -14,8 +16,8 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanFastAttackWhenKnightIsAwake()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canFastAttack(is_knight_awake: true);
-        $expected = false;
+        $actual       = $infiltration->canFastAttack(is_knight_awake: true);
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -26,8 +28,8 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanFastAttackWhenKnightIsAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canFastAttack(is_knight_awake: false);
-        $expected = true;
+        $actual       = $infiltration->canFastAttack(is_knight_awake: false);
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -38,12 +40,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCannotSpyWhenEveryoneAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -54,12 +56,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenOnlyPrisonerAwake()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -70,12 +72,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenOnlyArcherAwake()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: false
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -86,12 +88,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenOnlyKnightAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -102,12 +104,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenOnlyKnightAwake()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: false
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -118,12 +120,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenOnlyArcherAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -134,12 +136,12 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSpyWhenEveryoneAwake()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSpy(
+        $actual       = $infiltration->canSpy(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: false
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -150,11 +152,11 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSignalWhenAllAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSignal(
+        $actual       = $infiltration->canSignal(
             is_archer_awake: false,
             is_prisoner_awake: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -165,11 +167,11 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSignalWhenArcherAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSignal(
+        $actual       = $infiltration->canSignal(
             is_archer_awake: false,
             is_prisoner_awake: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -180,11 +182,11 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSignalWhenPrisonerAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSignal(
+        $actual       = $infiltration->canSignal(
             is_archer_awake: true,
             is_prisoner_awake: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -195,11 +197,11 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanSignalWhenNoOneAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canSignal(
+        $actual       = $infiltration->canSignal(
             is_archer_awake: true,
             is_prisoner_awake: true
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -210,13 +212,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenAllAsleep()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: false,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -227,13 +229,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenAllAsleepAndDogPresent()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: false,
             is_dog_present: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -244,13 +246,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenPrisonerAwakeWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: true,
             is_dog_present: false
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -261,13 +263,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenPrisonerAwakeWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: false,
             is_prisoner_awake: true,
             is_dog_present: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -278,13 +280,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenArcherAwakeWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: false,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -295,13 +297,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenArcherAwakeWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: false,
             is_dog_present: true
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -312,13 +314,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenKnightAsleepWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: true,
             is_dog_present: true
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -329,13 +331,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenKnightAsleepWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: false,
             is_archer_awake: true,
             is_prisoner_awake: true,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -346,13 +348,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenKnightAwakeWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: false,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -363,13 +365,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenKnightAwakeWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: false,
             is_dog_present: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -380,13 +382,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenArcherAsleepWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: true,
             is_dog_present:false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -397,13 +399,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenArcherAsleepWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: false,
             is_prisoner_awake: true,
             is_dog_present: true
         );
-        $expected = true;
+        $expected     = true;
         $this->assertEquals($expected, $actual);
     }
 
@@ -414,13 +416,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenPrisonerAsleepWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: true,
             is_prisoner_awake: false,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -431,13 +433,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenPrisonerAsleepWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: true,
             is_prisoner_awake: false,
             is_dog_present: true
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -448,13 +450,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenAllAwakeWithoutDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: true,
             is_prisoner_awake: true,
             is_dog_present: false
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 
@@ -465,13 +467,13 @@ class AnnalynsInfiltrationTest extends PHPUnit\Framework\TestCase
     public function testCanLiberateWhenAllAwakeWithDog()
     {
         $infiltration = new AnnalynsInfiltration();
-        $actual = $infiltration->canLiberate(
+        $actual       = $infiltration->canLiberate(
             is_knight_awake: true,
             is_archer_awake: true,
             is_prisoner_awake: true,
             is_dog_present: true
         );
-        $expected = false;
+        $expected     = false;
         $this->assertEquals($expected, $actual);
     }
 }
