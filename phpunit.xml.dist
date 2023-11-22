@@ -2,32 +2,25 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="/vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
-         cacheResultFile=".phpunit.cache/test-results"
          executionOrder="depends,defects"
-         forceCoversAnnotation="true"
-         beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
-         beStrictAboutTodoAnnotatedTests="true"
-         failOnRisky="true"
-         failOnWarning="true"
-         verbose="true"
-         colors="true">
-    <testsuites>
-        <testsuite name="default">
-            <directory>high-scores</directory>
-            <directory>resistor-color</directory>
-            <directory>reverse-string</directory>
-            <directory>robot-simulator</directory>
-        </testsuite>
-    </testsuites>
-
-    <coverage cacheDirectory=".phpunit.cache/code-coverage"
-              processUncoveredFiles="true">
-        <include>
-            <directory suffix=".php">high-scores</directory>
-            <directory suffix=".php">resistor-color</directory>
-            <directory suffix=".php">reverse-string</directory>
-            <directory suffix=".php">robot-simulator</directory>
-        </include>
-    </coverage>
+         colors="true"
+         cacheDirectory=".phpunit.cache">
+  <testsuites>
+    <testsuite name="default">
+      <directory>high-scores</directory>
+      <directory>resistor-color</directory>
+      <directory>reverse-string</directory>
+      <directory>robot-simulator</directory>
+    </testsuite>
+  </testsuites>
+  <coverage/>
+  <source>
+    <include>
+      <directory suffix=".php">high-scores</directory>
+      <directory suffix=".php">resistor-color</directory>
+      <directory suffix=".php">reverse-string</directory>
+      <directory suffix=".php">robot-simulator</directory>
+    </include>
+  </source>
 </phpunit>
