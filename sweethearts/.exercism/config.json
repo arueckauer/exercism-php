@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "neenjaw"
+  ],
+  "files": {
+    "solution": [
+      "HighSchoolSweetheart.php"
+    ],
+    "test": [
+      "HighSchoolSweetheartTest.php"
+    ],
+    "exemplar": [
+      ".meta/exemplar.php"
+    ]
+  },
+  "forked_from": [
+    "elixir/high-school-sweetheart"
+  ],
+  "icon": "high-school-sweethearts",
+  "blurb": "Learn about love and strings!"
+}
