@@ -14,6 +14,7 @@
         <directory name="high-scores" />
         <directory name="lasagna" />
         <directory name="language-list" />
+        <directory name="lucky-numbers" />
         <directory name="pizza-pi" />
         <directory name="resistor-color" />
         <directory name="reverse-string" />

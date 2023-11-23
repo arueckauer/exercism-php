@@ -13,6 +13,7 @@
       <directory>high-scores</directory>
       <directory>lasagna</directory>
       <directory>language-list</directory>
+      <directory>lucky-numbers</directory>
       <directory>pizza-pi</directory>
       <directory>resistor-color</directory>
       <directory>reverse-string</directory>
@@ -30,6 +31,7 @@
       <directory suffix=".php">high-scores</directory>
       <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">language-list</directory>
+      <directory suffix=".php">lucky-numbers</directory>
       <directory suffix=".php">pizza-pi</directory>
       <directory suffix=".php">resistor-color</directory>
       <directory suffix=".php">reverse-string</directory>
