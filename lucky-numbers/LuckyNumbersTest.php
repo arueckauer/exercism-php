@@ -26,7 +26,7 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
         $this->assertSame($expected, $actual);
     }
 
-    public static function sumUpTestCases()
+    public static function sumUpTestCases(): array
     {
         return [
             'both numbers same length 1'       => [[2], [7], 9],
@@ -53,7 +53,7 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($actual);
     }
 
-    public static function isPalindromeTestCases()
+    public static function isPalindromeTestCases(): array
     {
         return [
             [0],
@@ -78,7 +78,7 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
         $this->assertFalse($actual);
     }
 
-    public static function isNoPalindromeTestCases()
+    public static function isNoPalindromeTestCases(): array
     {
         return [
             [12],
@@ -115,7 +115,7 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
         $this->assertSame('Must be a whole number larger than 0', $actual);
     }
 
-    public static function invalidInputTestCases()
+    public static function invalidInputTestCases(): array
     {
         return [
             ['some text'],
@@ -140,7 +140,7 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
         $this->assertSame('', $actual);
     }
 
-    public static function validInputTestCases()
+    public static function validInputTestCases(): array
     {
         return [
             ['1'],
