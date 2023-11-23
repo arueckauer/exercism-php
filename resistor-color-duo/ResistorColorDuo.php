@@ -28,6 +28,39 @@ class ResistorColorDuo
 {
     public function getColorsValue(array $colors): int
     {
-        throw new BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
+        $firstNumber  = ResistorColorNumber::fromName($colors[0]);
+        $secondNumber = ResistorColorNumber::fromName($colors[1]);
+
+        return (int) ($firstNumber->value . $secondNumber->value);
+    }
+}
+
+enum ResistorColorNumber: int
+{
+    case black  = 0;
+    case brown  = 1;
+    case red    = 2;
+    case orange = 3;
+    case yellow = 4;
+    case green  = 5;
+    case blue   = 6;
+    case violet = 7;
+    case grey   = 8;
+    case white  = 9;
+
+    public static function fromName(string $name): self
+    {
+        return match ($name) {
+            'black'  => self::black,
+            'brown'  => self::brown,
+            'red'    => self::red,
+            'orange' => self::orange,
+            'yellow' => self::yellow,
+            'green'  => self::green,
+            'blue'   => self::blue,
+            'violet' => self::violet,
+            'grey'   => self::grey,
+            'white'  => self::white,
+        };
     }
 }
