@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Address
 {
-    public $street;
-    public $postal_code;
-    public $city;
+    public string $street;
+    public string $postal_code;
+    public string $city;
 }

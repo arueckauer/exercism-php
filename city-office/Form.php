@@ -4,23 +4,23 @@ declare(strict_types=1);
 
 class Form
 {
-    function blanks($length)
+    public function blanks(int $length): string
     {
         return str_repeat(" ", $length);
     }
 
-    function letters($word)
+    public function letters(string $word): array
     {
         return explode("", $word);
     }
 
-    function checkLength($word, $max_length)
+    public function checkLength(string $word, int $max_length): bool
     {
         $difference = mb_strlen($word) - $max_length;
         return $difference <= 0;
     }
 
-    function formatAddress($address)
+    public function formatAddress(Address $address): string
     {
         $formatted_street      = mb_strtoupper($address->street);
         $formatted_postal_code = mb_strtoupper($address->postal_code);
