@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "neenjaw"
+  ],
+  "files": {
+    "solution": [
+      "LanguageList.php"
+    ],
+    "test": [
+      "LanguageListTest.php"
+    ],
+    "exemplar": [
+      ".meta/exemplar.php"
+    ]
+  },
+  "forked_from": [
+    "clojure/tracks-on-tracks-on-tracks"
+  ],
+  "blurb": "Learn about functions and arrays!"
+}
