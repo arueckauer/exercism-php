@@ -10,6 +10,7 @@
 >
     <projectFiles>
         <directory name="annalyns-infiltration" />
+        <directory name="city-office" />
         <directory name="high-scores" />
         <directory name="lasagna" />
         <directory name="language-list" />
