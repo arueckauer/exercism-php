@@ -30,9 +30,13 @@
       "Exercism\\LanguageList\\": "language-list/",
       "Exercism\\LuckyNumbers\\": "lucky-numbers/",
       "Exercism\\PizzaPi\\": "pizza-pi/",
+      "Exercism\\Proverb\\": "proverb/",
       "Exercism\\ResistorColor\\": "resistor-color/",
+      "Exercism\\ResistorColorDuo\\": "resistor-color-duo/",
+      "Exercism\\ResistorColorTrio\\": "resistor-color-trio/",
       "Exercism\\ReverseString\\": "reverse-string/",
       "Exercism\\RobotSimulator\\": "robot-simulator/",
+      "Exercism\\SimpleCipher\\": "simple-cipher/",
       "Exercism\\Sweethearts\\": "sweethearts/",
       "Exercism\\Tournament\\": "tournament/",
       "Exercism\\WindowingSystem\\": "windowing-system/"

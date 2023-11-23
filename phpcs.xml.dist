@@ -13,13 +13,17 @@
     <file>annalyns-infiltration</file>
     <file>city-office</file>
     <file>high-scores</file>
-    <file>lasagna</file>
     <file>language-list</file>
+    <file>lasagna</file>
     <file>lucky-numbers</file>
     <file>pizza-pi</file>
+    <file>proverb</file>
+    <file>resistor-color-duo</file>
+    <file>resistor-color-trio</file>
     <file>resistor-color</file>
     <file>reverse-string</file>
     <file>robot-simulator</file>
+    <file>simple-cipher</file>
     <file>sweethearts</file>
     <file>tournament</file>
     <file>windowing-system</file>

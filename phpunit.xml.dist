@@ -11,13 +11,17 @@
       <directory>annalyns-infiltration</directory>
       <directory>city-office</directory>
       <directory>high-scores</directory>
-      <directory>lasagna</directory>
       <directory>language-list</directory>
+      <directory>lasagna</directory>
       <directory>lucky-numbers</directory>
       <directory>pizza-pi</directory>
+      <directory>proverb</directory>
+      <directory>resistor-color-duo</directory>
+      <directory>resistor-color-trio</directory>
       <directory>resistor-color</directory>
       <directory>reverse-string</directory>
       <directory>robot-simulator</directory>
+      <directory>simple-cipher</directory>
       <directory>sweethearts</directory>
       <directory>tournament</directory>
       <directory>windowing-system</directory>
@@ -29,13 +33,17 @@
       <directory suffix=".php">annalyns-infiltration</directory>
       <directory suffix=".php">city-office</directory>
       <directory suffix=".php">high-scores</directory>
-      <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">language-list</directory>
+      <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">lucky-numbers</directory>
       <directory suffix=".php">pizza-pi</directory>
+      <directory suffix=".php">proverb</directory>
+      <directory suffix=".php">resistor-color-duo</directory>
+      <directory suffix=".php">resistor-color-trio</directory>
       <directory suffix=".php">resistor-color</directory>
       <directory suffix=".php">reverse-string</directory>
       <directory suffix=".php">robot-simulator</directory>
+      <directory suffix=".php">simple-cipher</directory>
       <directory suffix=".php">sweethearts</directory>
       <directory suffix=".php">tournament</directory>
       <directory suffix=".php">windowing-system</directory>
