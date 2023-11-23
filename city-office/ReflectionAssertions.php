@@ -44,7 +44,7 @@ trait ReflectionAssertions
 
         $parameter = $method->getParameters()[$parameter_index] ?? null;
 
-        if (is_null($parameter)) {
+        if ($parameter === null) {
             $this->fail(
                 "Method '$parameter_name' missing parameter $parameter_index"
                 . " named '$parameter_name'"
