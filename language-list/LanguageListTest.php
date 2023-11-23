@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class LanguageListTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass(): void
@@ -54,7 +56,7 @@ class LanguageListTest extends PHPUnit\Framework\TestCase
     public function testAddingToLanguageList()
     {
         $language_list = language_list('c', 'cpp', 'php');
-        $pushed_list = add_to_language_list($language_list, 'java');
+        $pushed_list   = add_to_language_list($language_list, 'java');
         $this->assertEquals(['c', 'cpp', 'php', 'java'], $pushed_list);
     }
 
@@ -65,7 +67,7 @@ class LanguageListTest extends PHPUnit\Framework\TestCase
     public function testAddingDoesNotMutate()
     {
         $language_list = language_list('c', 'cpp', 'php');
-        $pushed_list = add_to_language_list($language_list, 'java');
+        $pushed_list   = add_to_language_list($language_list, 'java');
         $this->assertNotEquals($language_list, $pushed_list);
     }
 
@@ -76,7 +78,7 @@ class LanguageListTest extends PHPUnit\Framework\TestCase
     public function testCompleteLanguageList()
     {
         $language_list = language_list('c', 'cpp', 'php');
-        $pruned_list = prune_language_list($language_list);
+        $pruned_list   = prune_language_list($language_list);
         $this->assertEquals(['cpp', 'php'], $pruned_list);
     }
 
@@ -87,7 +89,7 @@ class LanguageListTest extends PHPUnit\Framework\TestCase
     public function testPruningDoesNotMutate()
     {
         $language_list = language_list('c', 'cpp', 'php');
-        $pruned_list = prune_language_list($language_list);
+        $pruned_list   = prune_language_list($language_list);
         $this->assertNotEquals($language_list, $pruned_list);
     }
 
@@ -98,7 +100,7 @@ class LanguageListTest extends PHPUnit\Framework\TestCase
     public function testCurrentReturnsTheFirstLanguage()
     {
         $language_list = language_list('php');
-        $current = current_language($language_list);
+        $current       = current_language($language_list);
         $this->assertEquals('php', $current);
     }
 
