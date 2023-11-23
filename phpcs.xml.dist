@@ -42,10 +42,15 @@
     <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
         <exclude-pattern>city-office</exclude-pattern>
     </rule>
+    <rule ref="WebimpressCodingStandard.Formatting.RedundantParentheses.SingleCast">
+        <exclude-pattern>resistor-color-duo</exclude-pattern>
+    </rule>
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
+        <exclude-pattern>resistor-color-duo</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
     </rule>
     <rule ref="Squiz.Classes.ClassFileName.NoMatch">
+        <exclude-pattern>resistor-color-duo</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
     </rule>
 </ruleset>
