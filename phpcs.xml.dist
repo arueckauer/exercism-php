@@ -44,13 +44,16 @@
     </rule>
     <rule ref="WebimpressCodingStandard.Formatting.RedundantParentheses.SingleCast">
         <exclude-pattern>resistor-color-duo</exclude-pattern>
+        <exclude-pattern>resistor-color-trio</exclude-pattern>
     </rule>
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
         <exclude-pattern>resistor-color-duo</exclude-pattern>
+        <exclude-pattern>resistor-color-trio</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
     </rule>
     <rule ref="Squiz.Classes.ClassFileName.NoMatch">
         <exclude-pattern>resistor-color-duo</exclude-pattern>
+        <exclude-pattern>resistor-color-trio</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
     </rule>
 </ruleset>
