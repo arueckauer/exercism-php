@@ -21,7 +21,7 @@ function prune_language_list(array $language_list): array
 
 function current_language(array $language_list): string
 {
-    return array_shift($language_list);
+    return $language_list[0];
 }
 
 function language_list_length(array $language_list): int
