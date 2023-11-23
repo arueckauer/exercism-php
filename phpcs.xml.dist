@@ -25,13 +25,17 @@
 
     <rule ref="LaminasCodingStandard">
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.Trait.Suffix"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.ValidVariableName.NotCamelCaps"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.ValidVariableName.NotCamelCapsInString"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.ValidVariableName.NotCamelCapsProperty"/>
     </rule>
 
     <rule ref="PSR1.Methods.CamelCapsMethodName">
         <exclude-pattern>*/*Test.php</exclude-pattern>
     </rule>
-    <rule ref="WebimpressCodingStandard.NamingConventions.ValidVariableName.NotCamelCaps">
-        <exclude-pattern>*/*.php</exclude-pattern>
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>city-office</exclude-pattern>
     </rule>
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
         <exclude-pattern>tournament</exclude-pattern>
