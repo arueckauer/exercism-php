@@ -1,33 +1,38 @@
 <?php
 
-/*
- * By adding type hints and enabling strict type checking, code can become
- * easier to read, self-documenting and reduce the number of potential bugs.
- * By default, type declarations are non-strict, which means they will attempt
- * to change the original type to match the type specified by the
- * type-declaration.
- *
- * In other words, if you pass a string to a function requiring a float,
- * it will attempt to convert the string value to a float.
- *
- * To enable strict mode, a single declare directive must be placed at the top
- * of the file.
- * This means that the strictness of typing is configured on a per-file basis.
- * This directive not only affects the type declarations of parameters, but also
- * a function's return type.
- *
- * For more info review the Concept on strict type checking in the PHP track
- * <link>.
- *
- * To disable strict typing, comment out the directive below.
- */
-
 declare(strict_types=1);
 
 class Proverb
 {
-    public function recite()
+    public function recite(array $words): array
     {
-        throw new BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
+        if (count($words) === 0) {
+            return [];
+        }
+
+        if (count($words) === 1) {
+            return [$this->lastVerse($words[0])];
+        }
+
+        $output = [];
+        $max    = count($words) - 1;
+        for ($i = 0; $i < $max; $i++) {
+            $output[] = sprintf(
+                'For want of a %s the %s was lost.',
+                $words[$i],
+                $words[$i + 1],
+            );
+        }
+        $output[] = $this->lastVerse($words[0]);
+
+        return $output;
+    }
+
+    private function lastVerse(string $word): string
+    {
+        return sprintf(
+            'And all for the want of a %s.',
+            $word,
+        );
     }
 }
