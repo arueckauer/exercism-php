@@ -26,7 +26,7 @@ declare(strict_types=1);
 
 class SimpleCipher
 {
-    public function __construct(string $key = null)
+    public function __construct(?string $key = null)
     {
         throw new BadFunctionCallException("Please implement the SimpleCipher class!");
     }

@@ -44,40 +44,40 @@ class SimpleCipherTest extends PHPUnit\Framework\TestCase
      */
     public function testRandomKeyCipherEncode(): void
     {
-        $cipher = new SimpleCipher();
+        $cipher    = new SimpleCipher();
         $plaintext = 'aaaaaaaaaa';
         $this->assertEquals(substr($cipher->key, 0, 10), $cipher->encode($plaintext));
     }
 
     public function testRandomKeyCipherDecode(): void
     {
-        $cipher = new SimpleCipher();
+        $cipher    = new SimpleCipher();
         $plaintext = 'aaaaaaaaaa';
         $this->assertEquals($plaintext, $cipher->decode(substr($cipher->key, 0, 10)));
     }
 
     public function testRandomKeyCipherReversible(): void
     {
-        $cipher = new SimpleCipher();
+        $cipher    = new SimpleCipher();
         $plaintext = 'abcdefghij';
         $this->assertEquals($plaintext, $cipher->decode($cipher->encode($plaintext)));
     }
 
     public function testCipherWithCapsKey(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $cipher = new SimpleCipher('ABCDEF');
     }
 
     public function testCipherWithNumericKey(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $cipher = new SimpleCipher('12345');
     }
 
     public function testCipherWithEmptyKey(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $cipher = new SimpleCipher('');
     }
 
@@ -89,62 +89,62 @@ class SimpleCipherTest extends PHPUnit\Framework\TestCase
 
     public function testCipherEncode(): void
     {
-        $cipher = new SimpleCipher('abcdefghij');
-        $plaintext = 'aaaaaaaaaa';
+        $cipher     = new SimpleCipher('abcdefghij');
+        $plaintext  = 'aaaaaaaaaa';
         $ciphertext = 'abcdefghij';
         $this->assertEquals($ciphertext, $cipher->encode($plaintext));
     }
 
     public function testCipherDecode(): void
     {
-        $cipher = new SimpleCipher('abcdefghij');
-        $plaintext = 'aaaaaaaaaa';
+        $cipher     = new SimpleCipher('abcdefghij');
+        $plaintext  = 'aaaaaaaaaa';
         $ciphertext = 'abcdefghij';
         $this->assertEquals($plaintext, $cipher->decode($ciphertext));
     }
 
     public function testCipherReversible(): void
     {
-        $cipher = new SimpleCipher('abcdefghij');
+        $cipher    = new SimpleCipher('abcdefghij');
         $plaintext = 'abcdefghij';
         $this->assertEquals($plaintext, $cipher->decode($cipher->encode($plaintext)));
     }
 
     public function testDoubleShiftEncode(): void
     {
-        $cipher = new SimpleCipher('iamapandabear');
-        $plaintext = 'iamapandabear';
+        $cipher     = new SimpleCipher('iamapandabear');
+        $plaintext  = 'iamapandabear';
         $ciphertext = 'qayaeaagaciai';
         $this->assertEquals($ciphertext, $cipher->encode($plaintext));
     }
 
     public function testCipherEncodeWrap(): void
     {
-        $cipher = new SimpleCipher('abcdefghij');
-        $plaintext = 'zzzzzzzzzz';
+        $cipher     = new SimpleCipher('abcdefghij');
+        $plaintext  = 'zzzzzzzzzz';
         $ciphertext = 'zabcdefghi';
         $this->assertEquals($ciphertext, $cipher->encode($plaintext));
     }
 
     public function testShiftCipherEncode(): void
     {
-        $cipher = new SimpleCipher('dddddddddd');
-        $plaintext = 'aaaaaaaaaa';
+        $cipher     = new SimpleCipher('dddddddddd');
+        $plaintext  = 'aaaaaaaaaa';
         $ciphertext = 'dddddddddd';
         $this->assertEquals($ciphertext, $cipher->encode($plaintext));
     }
 
     public function testShiftCipherDecode(): void
     {
-        $cipher = new SimpleCipher('dddddddddd');
-        $plaintext = 'aaaaaaaaaa';
+        $cipher     = new SimpleCipher('dddddddddd');
+        $plaintext  = 'aaaaaaaaaa';
         $ciphertext = 'dddddddddd';
         $this->assertEquals($plaintext, $cipher->decode($ciphertext));
     }
 
     public function testShiftCipherReversible(): void
     {
-        $cipher = new SimpleCipher('dddddddddd');
+        $cipher    = new SimpleCipher('dddddddddd');
         $plaintext = 'abcdefghij';
         $this->assertEquals($plaintext, $cipher->decode($cipher->encode($plaintext)));
     }

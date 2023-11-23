@@ -28,6 +28,6 @@ class ResistorColorDuo
 {
     public function getColorsValue(array $colors): int
     {
-        throw new \BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
+        throw new BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
     }
 }

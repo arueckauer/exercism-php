@@ -28,6 +28,6 @@ class ResistorColorTrio
 {
     public function label(): string
     {
-        throw new \BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
+        throw new BadMethodCallException(sprintf('Implement the %s method', __FUNCTION__));
     }
 }

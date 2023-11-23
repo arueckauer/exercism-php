@@ -65,7 +65,7 @@ class ProverbTest extends PHPUnit\Framework\TestCase
         $expected = [
             'For want of a nail the shoe was lost.',
             'For want of a shoe the horse was lost.',
-            'And all for the want of a nail.'
+            'And all for the want of a nail.',
         ];
         $this->assertEquals($expected, $this->proverb->recite($pieces));
     }
@@ -80,7 +80,7 @@ class ProverbTest extends PHPUnit\Framework\TestCase
             'For want of a rider the message was lost.',
             'For want of a message the battle was lost.',
             'For want of a battle the kingdom was lost.',
-            'And all for the want of a nail.'
+            'And all for the want of a nail.',
         ];
         $this->assertEquals($expected, $this->proverb->recite($pieces));
     }
@@ -92,7 +92,7 @@ class ProverbTest extends PHPUnit\Framework\TestCase
             'For want of a pin the gun was lost.',
             'For want of a gun the soldier was lost.',
             'For want of a soldier the battle was lost.',
-            'And all for the want of a pin.'
+            'And all for the want of a pin.',
         ];
         $this->assertEquals($expected, $this->proverb->recite($pieces));
     }
