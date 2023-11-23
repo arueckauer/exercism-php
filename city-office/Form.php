@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Form
 {
     function blanks($length)
@@ -20,9 +22,9 @@ class Form
 
     function formatAddress($address)
     {
-        $formatted_street = mb_strtoupper($address->street);
+        $formatted_street      = mb_strtoupper($address->street);
         $formatted_postal_code = mb_strtoupper($address->postal_code);
-        $formatted_city = mb_strtoupper($address->city);
+        $formatted_city        = mb_strtoupper($address->city);
 
         return <<<FORMATTED_ADDRESS
             $formatted_street

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 trait ReflectionAssertions
 {
     private function assertProperty(
@@ -7,7 +9,7 @@ trait ReflectionAssertions
         string $property_name,
         array $assertions = []
     ) {
-        $reflector = new ReflectionClass($class_name);
+        $reflector  = new ReflectionClass($class_name);
         $assertions = $this->getAssertionDefaults($assertions);
 
         try {
@@ -16,7 +18,7 @@ trait ReflectionAssertions
             $this->fail(
                 "Property '$property_name' missing from class '{$class_name}'"
             );
-        };
+        }
 
         $this->assertType($property, $assertions);
         $this->assertDefault($property, $assertions);
@@ -29,7 +31,7 @@ trait ReflectionAssertions
         int $parameter_index,
         array $assertions = []
     ): void {
-        $reflector = new ReflectionClass($class_name);
+        $reflector  = new ReflectionClass($class_name);
         $assertions = $this->getAssertionDefaults($assertions);
 
         try {
@@ -38,14 +40,15 @@ trait ReflectionAssertions
             $this->fail(
                 "Method '$method_name' missing from class '$class_name'"
             );
-        };
+        }
 
         $parameter = $method->getParameters()[$parameter_index] ?? null;
 
         if (is_null($parameter)) {
             $this->fail(
                 "Method '$parameter_name' missing parameter $parameter_index"
-                . " named '$parameter_name'");
+                . " named '$parameter_name'"
+            );
         }
 
         if ($parameter->getName() !== $parameter_name) {
@@ -64,7 +67,7 @@ trait ReflectionAssertions
         string $method_name,
         array $assertions
     ): void {
-        $reflector = new ReflectionClass($class_name);
+        $reflector  = new ReflectionClass($class_name);
         $assertions = $this->getAssertionDefaults($assertions);
 
         try {
@@ -73,7 +76,7 @@ trait ReflectionAssertions
             $this->fail(
                 "Method '$method_name' missing from class '$class_name'"
             );
-        };
+        }
 
         if ($assertions['has_type']) {
             $this->assertTrue(
@@ -104,7 +107,7 @@ trait ReflectionAssertions
     private function getAssertionDefaults(array $assertions): array
     {
         return array_merge([
-            'has_type' => false,
+            'has_type'          => false,
             'has_default_value' => false,
         ], $assertions);
     }
@@ -114,7 +117,7 @@ trait ReflectionAssertions
         array $assertions
     ): void {
         $reflector_type_name = $this->getReflectionTypeName($reflector);
-        $name = $reflector->getName();
+        $name                = $reflector->getName();
 
         if ($assertions['has_type']) {
             $this->assertTrue(
@@ -146,11 +149,11 @@ trait ReflectionAssertions
         ReflectionProperty|ReflectionParameter $reflector,
         array $assertions
     ): void {
-        $reflector_type_name = $this->getReflectionTypeName($reflector);
+        $reflector_type_name      = $this->getReflectionTypeName($reflector);
         $has_default_value_method = $reflector_type_name === 'Property'
             ? 'hasDefaultValue'
             : 'isDefaultValueAvailable';
-        $name = $reflector->getName();
+        $name                     = $reflector->getName();
 
         if ($assertions['has_default_value']) {
             $this->assertTrue(
@@ -179,6 +182,6 @@ trait ReflectionAssertions
     private function getReflectionTypeName(
         ReflectionParameter | ReflectionProperty $reflector
     ): string {
-        return preg_replace('/^Reflection/', '', get_class($reflector));
+        return preg_replace('/^Reflection/', '', $reflector::class);
     }
 }

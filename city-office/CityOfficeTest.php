@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require_once 'ReflectionAssertions.php';
 require_once 'Address.php';
 require_once 'Form.php';
@@ -18,9 +20,9 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Address::class,
             property_name: 'street',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
-                'type_allows_null' => false
+                'has_type'         => true,
+                'type_name'        => 'string',
+                'type_allows_null' => false,
             ]
         );
     }
@@ -35,9 +37,9 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Address::class,
             property_name: 'postal_code',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
-                'type_allows_null' => false
+                'has_type'         => true,
+                'type_name'        => 'string',
+                'type_allows_null' => false,
             ]
         );
     }
@@ -52,9 +54,9 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Address::class,
             property_name: 'city',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
-                'type_allows_null' => false
+                'has_type'         => true,
+                'type_name'        => 'string',
+                'type_allows_null' => false,
             ]
         );
     }
@@ -71,10 +73,10 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             parameter_name: 'length',
             parameter_index: 0,
             assertions: [
-                'has_type' => true,
-                'type_name' => 'int',
-                'type_allows_null' => false,
-                'has_default_value' => false
+                'has_type'          => true,
+                'type_name'         => 'int',
+                'type_allows_null'  => false,
+                'has_default_value' => false,
             ]
         );
     }
@@ -89,8 +91,8 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Form::class,
             method_name: 'blanks',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
+                'has_type'         => true,
+                'type_name'        => 'string',
                 'type_allows_null' => false,
             ]
         );
@@ -108,10 +110,10 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             parameter_name: 'word',
             parameter_index: 0,
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
-                'type_allows_null' => false,
-                'has_default_value' => false
+                'has_type'          => true,
+                'type_name'         => 'string',
+                'type_allows_null'  => false,
+                'has_default_value' => false,
             ]
         );
     }
@@ -126,8 +128,8 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Form::class,
             method_name: 'letters',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'array',
+                'has_type'         => true,
+                'type_name'        => 'array',
                 'type_allows_null' => false,
             ]
         );
@@ -145,10 +147,10 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             parameter_name: 'word',
             parameter_index: 0,
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
-                'type_allows_null' => false,
-                'has_default_value' => false
+                'has_type'          => true,
+                'type_name'         => 'string',
+                'type_allows_null'  => false,
+                'has_default_value' => false,
             ]
         );
     }
@@ -165,10 +167,10 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             parameter_name: 'max_length',
             parameter_index: 1,
             assertions: [
-                'has_type' => true,
-                'type_name' => 'int',
-                'type_allows_null' => false,
-                'has_default_value' => false
+                'has_type'          => true,
+                'type_name'         => 'int',
+                'type_allows_null'  => false,
+                'has_default_value' => false,
             ]
         );
     }
@@ -183,8 +185,8 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Form::class,
             method_name: 'checkLength',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'bool',
+                'has_type'         => true,
+                'type_name'        => 'bool',
                 'type_allows_null' => false,
             ]
         );
@@ -202,10 +204,10 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             parameter_name: 'address',
             parameter_index: 0,
             assertions: [
-                'has_type' => true,
-                'type_name' => 'Address',
-                'type_allows_null' => false,
-                'has_default_value' => false
+                'has_type'          => true,
+                'type_name'         => 'Address',
+                'type_allows_null'  => false,
+                'has_default_value' => false,
             ]
         );
     }
@@ -220,8 +222,8 @@ class CityOfficeTest extends PHPUnit\Framework\TestCase
             class_name: Form::class,
             method_name: 'formatAddress',
             assertions: [
-                'has_type' => true,
-                'type_name' => 'string',
+                'has_type'         => true,
+                'type_name'        => 'string',
                 'type_allows_null' => false,
             ]
         );
