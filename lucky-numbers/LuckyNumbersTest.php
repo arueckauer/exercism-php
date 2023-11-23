@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class LuckyNumbersTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass(): void
@@ -27,13 +29,13 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
     public static function sumUpTestCases()
     {
         return [
-            'both numbers same length 1' => [ [2], [7], 9 ],
-            'both numbers same length 2' => [ [2, 4], [5, 7], 81 ],
-            'both numbers same length 3' => [ [5, 3, 4], [3, 6, 2], 896 ],
-            'first shorter than second number' => [ [2, 4], [1, 5, 7], 181 ],
-            'first longer than second number' => [ [2, 2, 5], [5, 7], 282 ],
-            'handles overflow' => [ [9, 9, 9], [1, 0, 1], 1100 ],
-            'handles large numbers' => [ [9, 9, 9, 9, 9, 9], [1], 1000000 ],
+            'both numbers same length 1'       => [[2], [7], 9],
+            'both numbers same length 2'       => [[2, 4], [5, 7], 81],
+            'both numbers same length 3'       => [[5, 3, 4], [3, 6, 2], 896],
+            'first shorter than second number' => [[2, 4], [1, 5, 7], 181],
+            'first longer than second number'  => [[2, 2, 5], [5, 7], 282],
+            'handles overflow'                 => [[9, 9, 9], [1, 0, 1], 1100],
+            'handles large numbers'            => [[9, 9, 9, 9, 9, 9], [1], 1000000],
         ];
     }
 
@@ -54,11 +56,11 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
     public static function isPalindromeTestCases()
     {
         return [
-            [ 0 ],
-            [ 6 ],
-            [ 33 ],
-            [ 15651 ],
-            [ 48911984 ],
+            [0],
+            [6],
+            [33],
+            [15651],
+            [48911984],
         ];
     }
 
@@ -79,9 +81,9 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
     public static function isNoPalindromeTestCases()
     {
         return [
-            [ 12 ],
-            [ 156512 ],
-            [ 48921984 ],
+            [12],
+            [156512],
+            [48921984],
         ];
     }
 
@@ -116,10 +118,10 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
     public static function invalidInputTestCases()
     {
         return [
-            [ 'some text' ],
-            [ 'f861' ],
-            [ '-42' ],
-            [ '0' ],
+            ['some text'],
+            ['f861'],
+            ['-42'],
+            ['0'],
         ];
     }
 
@@ -141,12 +143,12 @@ class LuckyNumbersTest extends PHPUnit\Framework\TestCase
     public static function validInputTestCases()
     {
         return [
-            [ '1' ],
-            [ '123456789' ],
-            [ '   123    ' ],
-            [ '5e3' ],
-            [ '4.2E1' ],
-            [ '00015-plus' ],
+            ['1'],
+            ['123456789'],
+            ['   123    '],
+            ['5e3'],
+            ['4.2E1'],
+            ['00015-plus'],
         ];
     }
 }
