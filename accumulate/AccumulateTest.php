@@ -1,27 +1,5 @@
 <?php
 
-/*
- * By adding type hints and enabling strict type checking, code can become
- * easier to read, self-documenting and reduce the number of potential bugs.
- * By default, type declarations are non-strict, which means they will attempt
- * to change the original type to match the type specified by the
- * type-declaration.
- *
- * In other words, if you pass a string to a function requiring a float,
- * it will attempt to convert the string value to a float.
- *
- * To enable strict mode, a single declare directive must be placed at the top
- * of the file.
- * This means that the strictness of typing is configured on a per-file basis.
- * This directive not only affects the type declarations of parameters, but also
- * a function's return type.
- *
- * For more info review the Concept on strict type checking in the PHP track
- * <link>.
- *
- * To disable strict typing, comment out the directive below.
- */
-
 declare(strict_types=1);
 
 class AccumulateTest extends PHPUnit\Framework\TestCase
@@ -78,8 +56,8 @@ class AccumulateTest extends PHPUnit\Framework\TestCase
 
     public function testAccumulateWithinAccumulate(): void
     {
-        $chars = ['a', 'b', 'c'];
-        $digits = [1, 2, 3];
+        $chars    = ['a', 'b', 'c'];
+        $digits   = [1, 2, 3];
         $expected = [['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']];
 
         $this->assertEquals(
@@ -91,8 +69,6 @@ class AccumulateTest extends PHPUnit\Framework\TestCase
             })
         );
     }
-
-    // Additional points for making the following tests pass
 
     public function testAccumulateUsingBuiltInFunction(): void
     {
@@ -117,7 +93,7 @@ class AccumulateTest extends PHPUnit\Framework\TestCase
 
 class Str
 {
-    public static function len($string): int
+    public static function len(string $string): int
     {
         return strlen($string);
     }
@@ -125,7 +101,7 @@ class Str
 
 class StrSpliter
 {
-    public function __invoke($value)
+    public function __invoke(string $value): array
     {
         return str_split($value);
     }
@@ -133,8 +109,8 @@ class StrSpliter
 
 class Is
 {
-    public function truthy($value): bool
+    public function truthy(mixed $value): bool
     {
-        return boolval($value);
+        return (bool) $value;
     }
 }

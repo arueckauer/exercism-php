@@ -57,11 +57,13 @@
         <exclude-pattern>resistor-color-trio</exclude-pattern>
     </rule>
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
+        <exclude-pattern>accumulate</exclude-pattern>
         <exclude-pattern>resistor-color-duo</exclude-pattern>
         <exclude-pattern>resistor-color-trio</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
     </rule>
     <rule ref="Squiz.Classes.ClassFileName.NoMatch">
+        <exclude-pattern>accumulate</exclude-pattern>
         <exclude-pattern>resistor-color-duo</exclude-pattern>
         <exclude-pattern>resistor-color-trio</exclude-pattern>
         <exclude-pattern>tournament</exclude-pattern>
