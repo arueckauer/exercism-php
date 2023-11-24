@@ -19,30 +19,6 @@
     "phpunit/phpunit": "^10.4",
     "roave/security-advisories": "dev-latest"
   },
-  "autoload": {
-    "psr-4": {
-      "Exercism\\AnnalynsInfiltration\\": "annalyns-infiltration/",
-      "Exercism\\Change\\": "change/",
-      "Exercism\\CityOffice\\": "city-office/",
-      "Exercism\\HighScores\\": "high-scores/",
-      "Exercism\\Lasagna\\": "lasagna/",
-      "Exercism\\LanguageList\\": "language-list/",
-      "Exercism\\LuckyNumbers\\": "lucky-numbers/",
-      "Exercism\\Minesweeper\\": "minesweeper/",
-      "Exercism\\PizzaPi\\": "pizza-pi/",
-      "Exercism\\Proverb\\": "proverb/",
-      "Exercism\\ResistorColor\\": "resistor-color/",
-      "Exercism\\ResistorColorDuo\\": "resistor-color-duo/",
-      "Exercism\\ResistorColorTrio\\": "resistor-color-trio/",
-      "Exercism\\ReverseString\\": "reverse-string/",
-      "Exercism\\RobotSimulator\\": "robot-simulator/",
-      "Exercism\\SimpleCipher\\": "simple-cipher/",
-      "Exercism\\Sweethearts\\": "sweethearts/",
-      "Exercism\\TwelveDays\\": "twelve-days/",
-      "Exercism\\Tournament\\": "tournament/",
-      "Exercism\\WindowingSystem\\": "windowing-system/"
-    }
-  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
