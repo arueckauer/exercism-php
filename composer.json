@@ -17,9 +17,7 @@
     "ergebnis/composer-normalize": "^2.39",
     "laminas/laminas-coding-standard": "^2.5",
     "phpunit/phpunit": "^10.4",
-    "rector/rector": "^0.18.10",
-    "roave/security-advisories": "dev-latest",
-    "vimeo/psalm": "^5.15"
+    "roave/security-advisories": "dev-latest"
   },
   "autoload": {
     "psr-4": {
