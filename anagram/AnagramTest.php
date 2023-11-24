@@ -1,15 +1,16 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace ExercismTest\Anagram;
 
 use PHPUnit\Framework\TestCase;
+
 use function Exercism\Anagram\detectAnagrams;
 
 class AnagramTest extends TestCase
 {
-    public static function setUpBeforeClass() : void
+    public static function setUpBeforeClass(): void
     {
         require_once 'anagram.php';
     }
