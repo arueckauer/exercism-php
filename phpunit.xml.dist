@@ -19,6 +19,7 @@
       <directory>language-list</directory>
       <directory>lasagna</directory>
       <directory>lucky-numbers</directory>
+      <directory>matching-brackets</directory>
       <directory>minesweeper</directory>
       <directory>pizza-pi</directory>
       <directory>proverb</directory>
