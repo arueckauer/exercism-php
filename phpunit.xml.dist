@@ -27,6 +27,7 @@
       <directory>simple-cipher</directory>
       <directory>sweethearts</directory>
       <directory>tournament</directory>
+      <directory>twelve-days</directory>
       <directory>windowing-system</directory>
     </testsuite>
   </testsuites>
@@ -52,6 +53,7 @@
       <directory suffix=".php">simple-cipher</directory>
       <directory suffix=".php">sweethearts</directory>
       <directory suffix=".php">tournament</directory>
+      <directory suffix=".php">twelve-days</directory>
       <directory suffix=".php">windowing-system</directory>
     </include>
   </source>

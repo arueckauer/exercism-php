@@ -38,6 +38,7 @@
       "Exercism\\RobotSimulator\\": "robot-simulator/",
       "Exercism\\SimpleCipher\\": "simple-cipher/",
       "Exercism\\Sweethearts\\": "sweethearts/",
+      "Exercism\\TwelveDays\\": "twelve-days/",
       "Exercism\\Tournament\\": "tournament/",
       "Exercism\\WindowingSystem\\": "windowing-system/"
     }
