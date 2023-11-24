@@ -44,6 +44,7 @@
         <exclude-pattern>*/*Test.php</exclude-pattern>
     </rule>
     <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>twelve-days</exclude-pattern>
         <exclude-pattern>*/*Test.php</exclude-pattern>
     </rule>
     <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
