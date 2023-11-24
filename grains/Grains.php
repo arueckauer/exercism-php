@@ -18,10 +18,5 @@ function squareRaw(int $number): int
 
 function total(): string
 {
-    $total = 0;
-    for ($i = 1; $i <= 64; $i++) {
-        $total += squareRaw($i);
-    }
-
-    return sprintf('%u', $total);
+    return sprintf('%u', (1 << 64) - 1);
 }
