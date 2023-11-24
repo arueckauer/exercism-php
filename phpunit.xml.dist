@@ -16,6 +16,7 @@
       <directory>language-list</directory>
       <directory>lasagna</directory>
       <directory>lucky-numbers</directory>
+      <directory>minesweeper</directory>
       <directory>pizza-pi</directory>
       <directory>proverb</directory>
       <directory>resistor-color-duo</directory>
@@ -40,6 +41,7 @@
       <directory suffix=".php">language-list</directory>
       <directory suffix=".php">lasagna</directory>
       <directory suffix=".php">lucky-numbers</directory>
+      <directory suffix=".php">minesweeper</directory>
       <directory suffix=".php">pizza-pi</directory>
       <directory suffix=".php">proverb</directory>
       <directory suffix=".php">resistor-color-duo</directory>
