@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExercismTest\Anagram;
-
 use PHPUnit\Framework\TestCase;
-
-use function Exercism\Anagram\detectAnagrams;
 
 class AnagramTest extends TestCase
 {

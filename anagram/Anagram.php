@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Exercism\Anagram;
-
-use function array_count_values;
-use function mb_strtolower;
-use function str_split;
-
 function detectAnagrams(string $word, array $possibleAnagrams): array
 {
     $anagrams   = [];
