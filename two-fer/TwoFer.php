@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-function twoFer(string $name): string
+function twoFer(string $name = 'you'): string
 {
-    throw new BadFunctionCallException("Implement the twoFer function");
+    return sprintf(
+        'One for %s, one for me.',
+        $name
+    );
 }
