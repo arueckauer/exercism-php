@@ -8,6 +8,7 @@
          cacheDirectory=".phpunit.cache">
   <testsuites>
     <testsuite name="default">
+      <directory>accumulate</directory>
       <directory>acronym</directory>
       <directory>anagram</directory>
       <directory>annalyns-infiltration</directory>
@@ -35,6 +36,7 @@
   <coverage/>
   <source>
     <include>
+      <directory suffix=".php">acronym</directory>
       <directory suffix=".php">acronym</directory>
       <directory suffix=".php">anagram</directory>
       <directory suffix=".php">annalyns-infiltration</directory>
