@@ -32,6 +32,7 @@
       <directory>sweethearts</directory>
       <directory>tournament</directory>
       <directory>twelve-days</directory>
+      <directory>two-fer</directory>
       <directory>windowing-system</directory>
     </testsuite>
   </testsuites>
