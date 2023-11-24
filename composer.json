@@ -24,6 +24,7 @@
   "autoload": {
     "psr-4": {
       "Exercism\\AnnalynsInfiltration\\": "annalyns-infiltration/",
+      "Exercism\\Change\\": "change/",
       "Exercism\\CityOffice\\": "city-office/",
       "Exercism\\HighScores\\": "high-scores/",
       "Exercism\\Lasagna\\": "lasagna/",

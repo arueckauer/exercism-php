@@ -9,6 +9,7 @@
   <testsuites>
     <testsuite name="default">
       <directory>annalyns-infiltration</directory>
+      <directory>change</directory>
       <directory>city-office</directory>
       <directory>high-scores</directory>
       <directory>language-list</directory>
@@ -31,6 +32,7 @@
   <source>
     <include>
       <directory suffix=".php">annalyns-infiltration</directory>
+      <directory suffix=".php">change</directory>
       <directory suffix=".php">city-office</directory>
       <directory suffix=".php">high-scores</directory>
       <directory suffix=".php">language-list</directory>
