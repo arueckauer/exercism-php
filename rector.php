@@ -8,6 +8,7 @@ use Rector\Set\ValueObject\LevelSetList;
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths(
         [
+            __DIR__ . '/anagram',
             __DIR__ . '/annalyns-infiltration',
             __DIR__ . '/change',
             __DIR__ . '/city-office',

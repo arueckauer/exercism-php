@@ -9,6 +9,7 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
+        <directory name="anagram" />
         <directory name="annalyns-infiltration" />
         <directory name="change" />
         <directory name="city-office" />

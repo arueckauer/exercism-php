@@ -10,6 +10,7 @@
 
     <arg value="p"/>
 
+    <file>anagram</file>
     <file>annalyns-infiltration</file>
     <file>change</file>
     <file>city-office</file>
