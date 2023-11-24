@@ -17,8 +17,7 @@
     "ext-mbstring": "*",
     "ergebnis/composer-normalize": "^2.39",
     "laminas/laminas-coding-standard": "^2.5",
-    "phpunit/phpunit": "^10.4",
-    "roave/security-advisories": "dev-latest"
+    "phpunit/phpunit": "^10.4"
   },
   "config": {
     "allow-plugins": {
