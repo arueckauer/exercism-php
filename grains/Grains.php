@@ -8,12 +8,7 @@ function square(int $number): string
         throw new InvalidArgumentException('Square must be between 1 and 64');
     }
 
-    return sprintf('%u', squareRaw($number));
-}
-
-function squareRaw(int $number): int
-{
-    return 1 << ($number - 1);
+    return sprintf('%u', 1 << ($number - 1));
 }
 
 function total(): string
